@@ -23,7 +23,7 @@ while (line.size)
 temp_end(temp);
 ```
 ASIDE:
-Short description of my `get_next_line` implementation: of how this function is built: when it comes to memory managment, I am using arena allocator, when it comes to string processing I am operating with `t_string` structs only - they group the pointer to the string and the size/length of that string. The source code for this function is at the very end of this article.<br><br>
+Short description of my `get_next_line` implementation: when it comes to memory managment, I am using arena allocator, when it comes to string processing I am operating with `t_string` structs only - they group the pointer to the string and the size/length of that string. The source code for this function is at the very end of this article.<br><br>
 Let's count how many times `read` function will be called:
 ```sh
 $ gcc -Wall -Wextra -DBUFFER_SIZE=4096 -DENABLE_PROFILER=1 main.c
